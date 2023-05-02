@@ -15,11 +15,11 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
+
   /* border: 1px solid steelblue; */
   padding: 30px;
   border-radius: 5px;
-
-  box-shadow: 0px 4px 14px 0px rgba(70, 70, 70, 0.38);
+  box-shadow: 0 4px 14px 0 rgba(70, 70, 70, 0.38);
 }
 
 .header {
@@ -57,11 +57,11 @@ body {
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 input[type="checkbox"] {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .task {
@@ -122,8 +122,8 @@ footer {
 }
 
 .submit-warning {
-    font-size: 13px;
-    color: red;
-    margin-top: 5px;
-    display: block;
-  }
+  font-size: 13px;
+  color: red;
+  margin-top: 5px;
+  display: block;
+}
