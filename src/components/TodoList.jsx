@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import TodoItem from "./TodoItem";
 
 const TodoList = ({ tasksProps, setTasks, handleChange, delTodo }) => {
@@ -10,6 +10,19 @@ const TodoList = ({ tasksProps, setTasks, handleChange, delTodo }) => {
       ))}
     </ul>
   );
+};
+
+TodoList.propTypes = {
+  tasksProps: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      task: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
+  setTasks: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired,
 };
 
 export default TodoList;

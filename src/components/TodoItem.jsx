@@ -1,5 +1,4 @@
-import React from "react";
-
+import PropTypes from "prop-types";
 const TodoItem = ({ itemProp, delTodo, handleChange }) => {
   const completedStyle = {
     fontStyle: 'italic',
@@ -24,6 +23,16 @@ const TodoItem = ({ itemProp, delTodo, handleChange }) => {
       </h3>
     </li>
   );
+};
+
+TodoItem.propTypes = {
+  itemProp: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+  }).isRequired,
+  delTodo: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
